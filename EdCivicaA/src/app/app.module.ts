@@ -6,13 +6,17 @@ import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { RelazioneComponent } from './relazione/relazione.component';
-import { DatiComponent } from './dati/dati.component';
+import { TuberComponent } from './tuber/tuber.component';
+import { UhcComponent } from './uhc/uhc.component';
+import { VacciniComponent } from './vaccini/vaccini.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RelazioneComponent,
-    DatiComponent
+    TuberComponent,
+    UhcComponent,
+    VacciniComponent
   ],
   imports: [
     BrowserModule,
