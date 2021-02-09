@@ -8,7 +8,7 @@ import { VacciniComponent } from './vaccini/vaccini.component';
 
 const routes: Routes = [
   {path: 'relazione', component:RelazioneComponent},
-  {path: 'tubercolosi', component:TuberComponent},
+  {path: 'tuber', component:TuberComponent},
   {path: 'uhc', component:UhcComponent},
   {path: 'vaccini', component:VacciniComponent}
 ];
