@@ -9,9 +9,13 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  dati(dati: any) {
+    throw new Error("Method not implemented.");
+  }
   title = 'EdCivicaA';
   lista : Object[];
   ob : Observable<Object>;
+  DataView: any;
 
   constructor(private http:HttpClient, private sanitazer:DomSanitizer){}
   tuber(){
@@ -19,7 +23,20 @@ export class AppComponent {
     this.ob.subscribe(this.getData)
   }
 
-  getData = (data) => {
-    this.lista = data;
+  getData=(data)=>{
+  console.log(data);
+  this.DataView.push(['TimePeriod','Value'])
+  for(var i of data)
+  {
+    this.DataView.push([i['TimePeriod'],i['Value']]);
   }
+  console.log(this.dati);
+  this.LineChart.dataTable=this.DataView;
+}
+
+  public LineChart: GoogleChartInterface= {
+    chartType:'ColumnChart',
+    dataTable:undefined,
+    options:{'TimePeriod':'Value'},
+  };
 }
